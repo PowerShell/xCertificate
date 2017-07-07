@@ -1,6 +1,7 @@
 # xCertificate
 
 [![Build status](https://ci.appveyor.com/api/projects/status/0u9f8smiidg1j4kn/branch/master?svg=true)](https://ci.appveyor.com/project/PowerShell/xcertificate/branch/master)
+[![codecov](https://codecov.io/gh/PowerShell/xCertificate/branch/master/graph/badge.svg)](https://codecov.io/gh/PowerShell/xCertificate)
 
 The **xCertificate** module is a part of the Windows PowerShell Desired State
 Configuration (DSC) Resource Kit, which is a collection of DSC Resources. This
@@ -151,6 +152,7 @@ Please check out common DSC Resources [contributing guidelines](https://github.c
   files to be formatted as per the DSC Resource kit style guidelines.
 - Fixed verbose preference not being passed to CertificateDsc.Common functions -
   fixes [Issue 70](https://github.com/PowerShell/xCertificate/issues/70).
+- Add CodeCov.io code coverage reporting.
 
 ### 2.7.0.0
 
