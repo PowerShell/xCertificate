@@ -9,6 +9,8 @@
     if `ReferenceSubject` is null.
   - Fixed exception when Certificate with empty Subject exists in
     Certificate Store - fixes [Issue #190](https://github.com/PowerShell/CertificateDsc/issues/190).
+  - Changed `Import-CertificateEx` function to use `X509Certificate2Collection`
+    instead of `X509Certificate2` to support importing certificate chains
 
 ## 4.5.0.0
 
