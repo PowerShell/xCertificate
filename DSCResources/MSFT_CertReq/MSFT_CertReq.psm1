@@ -114,7 +114,7 @@ function Get-TargetResource
         [Parameter()]
         [ValidateNotNullOrEmpty()]
         [System.String]
-        $ProviderName = '"Microsoft RSA SChannel Cryptographic Provider"',
+        $ProviderName = 'Microsoft RSA SChannel Cryptographic Provider',
 
         [Parameter()]
         [ValidateNotNullOrEmpty()]
@@ -327,7 +327,7 @@ function Set-TargetResource
         [Parameter()]
         [ValidateNotNullOrEmpty()]
         [System.String]
-        $ProviderName = '"Microsoft RSA SChannel Cryptographic Provider"',
+        $ProviderName = 'Microsoft RSA SChannel Cryptographic Provider',
 
         [Parameter()]
         [ValidateNotNullOrEmpty()]
@@ -438,6 +438,11 @@ function Set-TargetResource
         In future versions, select variables from the list below could be moved to parameters!
     #>
     $Subject = "`"$Subject`""
+    # The ProviderName must be encapsulated in double quotes
+    if ($ProviderName[0] -ne '"')
+    {
+        $ProviderName = '"{0}"' -f $ProviderName
+    }
     $keySpec = '1'
     $machineKeySet = 'TRUE'
     $smime = 'FALSE'
@@ -777,7 +782,7 @@ function Test-TargetResource
         [Parameter()]
         [ValidateNotNullOrEmpty()]
         [System.String]
-        $ProviderName = '"Microsoft RSA SChannel Cryptographic Provider"',
+        $ProviderName = 'Microsoft RSA SChannel Cryptographic Provider',
 
         [Parameter()]
         [ValidateNotNullOrEmpty()]
