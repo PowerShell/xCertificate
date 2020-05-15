@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Added a catch for certreq generic errors which fixes [Issue #224](https://github.com/dsccommunity/CertificateDsc/issues/224)
 - Corrected incorrectly located entries in `CHANGELOG.MD`.
 - Fix bug `Find-Certificate` when invalid certificate path is passed - fixes
   [Issue #208](https://github.com/dsccommunity/CertificateDsc/issues/208).
